@@ -21,7 +21,7 @@
             <img src = "IMAGENES/LOGO.png" idth="125px"> 
         </div>
         <nav>
-            <ul> 
+            <ul id="MenuItems"> 
                 <li><a href="">HOME</a></li>
                 <li><a href="">Productos</a></li>
                 <li><a href="">Acerca</a></li>
@@ -30,6 +30,7 @@
             </ul> 
         </nav>
         <img src = "IMAGENES/cart.png" width="30px" height="30px">
+        <img src = "IMAGENES/menu.png" class="menu-icon" onclick="menutoggle()">
 
     </div>
     <div class="row">
@@ -547,9 +548,26 @@
             </div>
 
             <hr>
-            <p>Copyright 2021 - Grupo 5 C3-G33</p>
+            <p class="Copyright">Copyright 2021 - Grupo 5 C3-G33</p>
         </div>
     </div>
+<!--Js para menu-->>
+    <script>
+        var MenuItems = document.getElementById("MenuItems")
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if (MenuItems.style.maxHeight == "0px";)
+            {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else
+            {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
 
 </body>
 </HTML>
