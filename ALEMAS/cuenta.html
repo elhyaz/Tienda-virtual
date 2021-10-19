@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<HTML lang = "es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Productos - Alemashop </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+
+</head>
+<body>
+
+
+<div class="container">
+    <div class="navbar">
+        <div class = "logo">
+            <img src = "IMAGENES/LOGO.png" idth="125px"> 
+        </div>
+        <nav>
+            <ul id="MenuItems"> 
+                <li><a href="">HOME</a></li>
+                <li><a href="">Productos</a></li>
+                <li><a href="">Acerca</a></li>
+                <li><a href="">Contacto</a></li>
+                <li><a href="">Cuenta</a></li>
+            </ul> 
+        </nav>
+        <img src = "IMAGENES/cart.png" width="30px" height="30px">
+        <img src = "IMAGENES/menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+</div>
+
+<!-------------------------------cuenta---------------->
+
+    <div class="cuenta">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="IMAGENES/image1.png" width="100%">
+                </div>
+                <div class="col-2">
+                    <div class="forma">
+                        <div class="forma-btn">
+                            <span onclick="login()">Iniciar</span>
+                            <span onclick="register()">Registrar</span>
+                            <hr id="Indicator">
+                        </div>
+
+                        <form id="LoginForm">
+                            <input type="text" placeholder="Usuario">
+                            <input type="password" placeholder="Contraseña">
+                            <button type="submit" class="btn"> Ingresar</button>
+                            <a href="">Olvido su contraseña</a>
+                        </form>
+
+                        <form id="RegForm">
+                            <input type="text" placeholder="Usuario">
+                            <input type="email" placeholder="Correo">
+                            <input type="password" placeholder="Contraseña">
+                            <button type="submit" class="btn"> Registrar</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-------------------------------pie de pagina---------------->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Descarga nuestra app</h3>
+                    <p>Descarga la app para Android y Ios</p>
+                    <div class="app-logo">
+                        <img src="IMAGENES/play-store.png">
+                        <img src="IMAGENES/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="IMAGENES/logo-white.png">
+                    <p>Nuestro proposito es la sustenibilidad para </p> llevar los beneficios de nuestros productos </p> a tantos como sea posible.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Links utiles</h3>
+                    <ul>
+                    <li>Cupones</li>
+                    <li>Ultimas notificaciones</li>
+                    <li>Poliza de retorno</li>
+                    <li>Unete a nosotros</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>siguenos</h3>
+                    <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Tik tok</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+            <p class="Copyright">Copyright 2021 - Grupo 5 C3-G33</p>
+        </div>
+    </div>
+
+<!--Js para menu-->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if (MenuItems.style.maxHeight == "0px";)
+                {
+                    MenuItems.style.maxHeight = "200px";
+                }
+            else
+                {
+                    MenuItems.style.maxHeight = "0px";
+                }
+        }
+    </script>
+<!--inicio-->
+
+    <script type="text/javascript">
+        var loginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+
+        function register(){
+            RegForm.style.transform = "translateX(0px)";
+            loginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+        }
+
+        function login(){
+            RegForm.style.transform = "translateX(300px)";
+            loginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)"
+        }
+
+    </script>
+
+
+</body>
+</HTML>
