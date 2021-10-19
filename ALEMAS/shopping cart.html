@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<HTML lang = "es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Productos - Alemashop </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+
+</head>
+<body>
+
+
+<div class="container">
+    <div class="navbar">
+        <div class = "logo">
+            <img src = "IMAGENES/LOGO.png" idth="125px"> 
+        </div>
+        <nav>
+            <ul id="MenuItems"> 
+                <li><a href="">HOME</a></li>
+                <li><a href="">Productos</a></li>
+                <li><a href="">Acerca</a></li>
+                <li><a href="">Contacto</a></li>
+                <li><a href="">Cuenta</a></li>
+            </ul> 
+        </nav>
+        <img src = "IMAGENES/cart.png" width="30px" height="30px">
+        <img src = "IMAGENES/menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+</div>
+
+<!----------------detalles del carrito---------------------->
+
+<div class="small-container carrito">
+    <table>
+        <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="carrito-info">
+                    <img src="IMAGENES/buy-1.jpg">
+                    <div>
+                        <p>Camiseta imprimida roja</p>
+                        <small>Precio: 50.000</small>
+                        </br>
+                        <a href="">Quitar</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$50.000</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="carrito-info">
+                    <img src="IMAGENES/buy-2.jpg">
+                    <div>
+                        <p>zapatos</p>
+                        <small>Precio: 150.000</small>
+                        </br>
+                        <a href="">Quitar</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$150.000</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="carrito-info">
+                    <img src="IMAGENES/buy-3.jpg">
+                    <div>
+                        <p>sudadera</p>
+                        <small>Precio: 30.000</small>
+                        </br>
+                        <a href="">Quitar</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$30.000</td>
+        </tr>
+    </table>
+
+    <div class="precio-total">
+
+        <table>
+            <tr>
+                <td>Subtotal</td>
+                <td>$230.000</td>
+            </tr>
+            <tr>
+                <td>IVA</td>
+                <td>$69.000</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>299.000</td>
+            </tr>
+        </table>
+
+    </div>
+
+</div>
+
+
+<!-------------------------------pie de pagina---------------->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Descarga nuestra app</h3>
+                    <p>Descarga la app para Android y Ios</p>
+                    <div class="app-logo">
+                        <img src="IMAGENES/play-store.png">
+                        <img src="IMAGENES/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="IMAGENES/logo-white.png">
+                    <p>Nuestro proposito es la sustenibilidad para </p> llevar los beneficios de nuestros productos </p> a tantos como sea posible.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Links utiles</h3>
+                    <ul>
+                    <li>Cupones</li>
+                    <li>Ultimas notificaciones</li>
+                    <li>Poliza de retorno</li>
+                    <li>Unete a nosotros</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>siguenos</h3>
+                    <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Tik tok</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+            <p class="Copyright">Copyright 2021 - Grupo 5 C3-G33</p>
+        </div>
+    </div>
+
+<!--Js para menu-->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if (MenuItems.style.maxHeight == "0px";)
+                {
+                    MenuItems.style.maxHeight = "200px";
+                }
+            else
+                {
+                    MenuItems.style.maxHeight = "0px";
+                }
+        }
+    </script>
+
+
+</body>
+</HTML>
